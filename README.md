@@ -37,6 +37,7 @@ pipeline:
   deploy-lambda:
     image: omerxx/drone-lambda-plugin
     pull: true
+    function_region: eu-west-1
     function_name: my-function
     s3_bucket: some-bucket
     file_name: lambda-dir/lambda-project-${DRONE_BUILD_NUMBER}.zip
